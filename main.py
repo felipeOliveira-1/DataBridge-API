@@ -11,7 +11,6 @@ def scrape_website_content(url):
 
 def scrape_all_urls():
     urls = [
-        "https://www.canalrural.com.br/agricultura/"
         "https://www.noticiasagricolas.com.br/noticias/milho/",
         "https://www.noticiasagricolas.com.br/noticias/agronegocio/",
         "https://www.noticiasagricolas.com.br/noticias/cafe/",
