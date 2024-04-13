@@ -6,23 +6,8 @@ import time
 def scrape_website_content(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
-    
-    # Exclui scripts e estilos do conteúdo
-    for script_or_style in soup(["script", "style"]):
-        script_or_style.decompose()
-
-    # Extrai o texto de todo o documento HTML
-    text = soup.get_text()
-    
-    # Separa em linhas e remove espaços em branco no início e no fim de cada linha
-    lines = (line.strip() for line in text.splitlines())
-    # Quebra as linhas em segmentos para tratar múltiplos espaços e tabs
-    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-    # Remove linhas em branco
-    text_content = '\n'.join(chunk for chunk in chunks if chunk)
-    
-    return text_content
-
+    content = [p.text for p in soup.find_all('h2')]
+    return content
 
 def scrape_all_urls():
     urls = [
