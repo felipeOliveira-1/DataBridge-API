@@ -14,7 +14,9 @@ def scrape_all_urls():
         "https://www.noticiasagricolas.com.br/noticias/milho/",
         "https://www.noticiasagricolas.com.br/noticias/agronegocio/",
         "https://www.noticiasagricolas.com.br/noticias/cafe/",
-        "https://www.noticiasagricolas.com.br/noticias/soja/"
+        "https://www.noticiasagricolas.com.br/noticias/soja/",
+        "https://www.noticiasagricolas.com.br/noticias/trigo/",
+        "https://www.noticiasagricolas.com.br/noticias/usda/",
     ]
     
     scraped_data = {}
